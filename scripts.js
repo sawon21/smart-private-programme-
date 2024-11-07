@@ -1,5 +1,5 @@
 const videos = [
-  { title: "Facebook Video 1", url: "https://www.facebook.com/facebook/videos/10153231379946729/", description: 'This is a music video featuring Rick Astley.', thumbnail: "https://i.ibb.co.com/0rZ2tkJ/IMG-20241106-215647-667.jpg", tags: ["math"] },
+  { title: "Mathematics 2 | Chapter-13 | Naim vaiya", url: "https://www.facebook.com/61557552489666/videos/2623536554506330/?mibextid=rS40aB7S9Ucbxw6v", description: 'This is a music video featuring Rick Astley.', thumbnail: "https://i.ibb.co.com/CwgrwBy/bible-study-classes-1730836630921.jpg", tags: ["math"] },
   { title: "Facebook Video 2", url: "https://www.facebook.com/facebook/videos/10153331379946729/", description: 'This is a music video featuring Rick Astley.', thumbnail: "https://www.facebook.com/images/fb_icon_325x325.png", tags: ["physics"] },
   { title: "Facebook Video 3", url: "https://www.facebook.com/facebook/videos/10153431379946729/", description: 'This is a music video featuring Rick Astley.', thumbnail: "https://www.facebook.com/images/fb_icon_325x325.png", tags: ["chemistry"] },
   { title: "Facebook Video 4", url: "https://www.facebook.com/facebook/videos/10153531379946729/", description: 'This is a music video featuring Rick Astley.', thumbnail: "https://www.facebook.com/images/fb_icon_325x325.png", tags: ["math", "physics"] },
@@ -26,7 +26,7 @@ function generatePlaylist(videosToShow = videos) {
     videoItem.innerHTML = `
       <img src="${video.thumbnail}" alt="Video Thumbnail" />
       <div>
-        <h5>${video.title}</h5>
+        <h6>${video.title}</h6>
         <p>${video.description}</p>
       </div>
     `;
