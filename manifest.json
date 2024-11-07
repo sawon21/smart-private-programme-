@@ -1,0 +1,16 @@
+{
+  "name": "Smart Private Programme Online  Class ",
+  "short_name": "SPP Online Class",
+  "description": " Online  Class ",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "theme_color": "#333333",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
