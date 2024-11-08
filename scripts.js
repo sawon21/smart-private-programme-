@@ -1,5 +1,5 @@
 const videos = [
-  { title: "Mathematics 2 | Chapter-13 | Naim vaiya", url: "https://www.facebook.com/61557552489666/videos/2623536554506330/?mibextid=rS40aB7S9Ucbxw6v", description: 'This is a music video featuring Rick Astley.', thumbnail: "https://i.ibb.co.com/CwgrwBy/bible-study-classes-1730836630921.jpg", tags: ["math"] },
+  { title: "Mathematics 2 | Chapter-13 | Naim vaiya", url: "https://www.facebook.com/61557552489666/videos/2623536554506330/?mibextid=rS40aB7S9Ucbxw6v", description: '1:33:43', thumbnail: "https://i.ibb.co.com/CwgrwBy/bible-study-classes-1730836630921.jpg", tags: ["math"] },
   { title: "Facebook Video 2", url: "https://www.facebook.com/facebook/videos/10153331379946729/", description: 'This is a music video featuring Rick Astley.', thumbnail: "https://www.facebook.com/images/fb_icon_325x325.png", tags: ["physics"] },
   { title: "Facebook Video 3", url: "https://www.facebook.com/facebook/videos/10153431379946729/", description: 'This is a music video featuring Rick Astley.', thumbnail: "https://www.facebook.com/images/fb_icon_325x325.png", tags: ["chemistry"] },
   { title: "Facebook Video 4", url: "https://www.facebook.com/facebook/videos/10153531379946729/", description: 'This is a music video featuring Rick Astley.', thumbnail: "https://www.facebook.com/images/fb_icon_325x325.png", tags: ["math", "physics"] },
@@ -126,3 +126,30 @@ window.addEventListener('load', function () {
     welcomePopup.hide();
   }, 3000);
 });
+
+
+
+
+    // Check local storage for notification status on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      if (localStorage.getItem("notificationSeen") === "true") {
+        document.getElementById("badge").style.display = "none";
+      }
+    });
+
+    // Function to open the popup
+    function openPopup() {
+      document.getElementById("popup").style.display = "block";
+      document.getElementById("badge").style.display = "none";
+
+      // Store notification seen status in local storage
+      localStorage.setItem("notificationSeen", "true");
+    }
+
+    // Function to close the popup
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    // Event listener for notification button click
+    document.getElementById("notificationBtn").addEventListener("click", openPopup);
