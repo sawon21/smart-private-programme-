@@ -27,15 +27,17 @@
     <div class="container d-flex justify-content-between align-items-center py-3">
       <img src="logo.png" alt="Logo" class="logo" height="40">
       <h4 class="text-white">Smart Private programme </h4>
-        <button type="button" class="icon-button" id="notificationBtn">
+  
+  <button type="button" class="icon-button" id="notificationBtn">
     <span class="material-icons">notifications</span>
-    <span class="icon-button__badge" id="badge">1</span>
+    <span class="icon-button__badge" id="badge"></span>
   </button>
 
+  <!-- Popup content -->
   <div class="popup" id="popup">
     <div class="popup-content">
-      <h2>Notification</h2>
-      <p>This is the notification popup content.</p>
+      <h2 id="popupTitle">Notifications</h2>
+      <div id="popupMessages"></div>
       <button onclick="closePopup()">Close</button>
     </div>
   </div>
