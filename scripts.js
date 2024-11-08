@@ -131,7 +131,7 @@ window.addEventListener('load', function () {
 
 
 //Change "notification-(...)" //
-    const cacheName = "notification-v9971";
+    const cacheName = "notification-v99fcv71";
     
     
   // notification Messages //
@@ -139,8 +139,7 @@ window.addEventListener('load', function () {
     const unreadMessages = [
       { title: "New Message", content: "Mehedi Al Hasan Sawon " },
       { title: "Update Available", content: "A new update is available for your app." },
-      { title: "Friend Request", content: "Someone sent you a friend request." },
-            { title: "New Message", content: "You have received a new message." },
+      
       { title: "Update Available", content: "A new update is available for your app." },
       { title: "Friend Request", content: "Someone sent you a friend request." }
     ];
