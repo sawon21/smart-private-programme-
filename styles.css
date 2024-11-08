@@ -260,6 +260,17 @@ body {
 .install-notification button {
   margin-left: 10px;
 }
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 1px 1px;
+            text-align: center;
+            font-size: 11px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
 
 /*  notification styling */
     .icon-button {
