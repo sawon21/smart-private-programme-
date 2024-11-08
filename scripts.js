@@ -130,26 +130,51 @@ window.addEventListener('load', function () {
 
 
 
-    // Check local storage for notification status on page load
+//Change "notification-(...)" //
+    const cacheName = "notification-vffm71";
+    
+    
+  // notification Messages //
+  
+    const unreadMessages = [
+      { title: "New Message", content: "You have received a new message.You have received a new <br> message.You have received a new message.You have received a new message." },
+      { title: "Update Available", content: "A new update is available for your app." },
+      { title: "Friend Request", content: "Someone sent you a friend request." },
+            { title: "New Message", content: "You have received a new message." },
+      { title: "Update Available", content: "A new update is available for your app." },
+      { title: "Friend Request", content: "Someone sent you a friend request." }
+    ];
+
     document.addEventListener("DOMContentLoaded", function() {
-      if (localStorage.getItem("notificationSeen") === "true") {
+      const lastSeenCacheName = localStorage.getItem("notificationCacheName");
+
+      if (unreadMessages.length > 0 && lastSeenCacheName !== cacheName) {
+        document.getElementById("badge").textContent = unreadMessages.length;
+        document.getElementById("badge").style.display = "flex";
+      } else {
         document.getElementById("badge").style.display = "none";
       }
     });
 
-    // Function to open the popup
     function openPopup() {
+      const popupMessagesContainer = document.getElementById("popupMessages");
+      popupMessagesContainer.innerHTML = "";
+
+      unreadMessages.forEach(message => {
+        const messageDiv = document.createElement("div");
+        messageDiv.classList.add("message");
+        messageDiv.innerHTML = `<h3>${message.title}</h3><p>${message.content}</p>`;
+        popupMessagesContainer.appendChild(messageDiv);
+      });
+
       document.getElementById("popup").style.display = "block";
       document.getElementById("badge").style.display = "none";
 
-      // Store notification seen status in local storage
-      localStorage.setItem("notificationSeen", "true");
+      localStorage.setItem("notificationCacheName", cacheName);
     }
 
-    // Function to close the popup
     function closePopup() {
       document.getElementById("popup").style.display = "none";
     }
 
-    // Event listener for notification button click
     document.getElementById("notificationBtn").addEventListener("click", openPopup);
