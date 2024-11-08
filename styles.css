@@ -261,8 +261,8 @@ body {
   margin-left: 10px;
 }
 
-
-  .icon-button {
+/*  notification styling */
+    .icon-button {
       position: relative;
       display: flex;
       align-items: center;
@@ -348,7 +348,7 @@ body {
     }
 
     .popup-content button {
-      background-color: #4CAF50;
+      background-color: red;
       color: #fff;
       border: none;
       padding: 10px 20px;
@@ -358,16 +358,24 @@ body {
     }
 
     .popup-content button:hover {
-      background-color: #45a049;
-}
+      background-color:#710118 ;
+    }
 
-                footer {
-            background-color: black;
-            color: white;
-            padding: 0px 0px;
-            text-align: center;
-            font-size: 6px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+    .message {
+      text-align: left;
+      margin: 10px 0;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .message h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .message p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #555;
+    }
