@@ -6,7 +6,7 @@
     <title>Smart Private Programme Online Class</title>
     <meta property="og:image" content="logo.png">
     <link rel="icon" href="icon.png"/>    
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -27,6 +27,19 @@
     <div class="container d-flex justify-content-between align-items-center py-3">
       <img src="logo.png" alt="Logo" class="logo" height="40">
       <h4 class="text-white">Smart Private programme </h4>
+        <button type="button" class="icon-button" id="notificationBtn">
+    <span class="material-icons">notifications</span>
+    <span class="icon-button__badge" id="badge">1</span>
+  </button>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Notification</h2>
+      <p>This is the notification popup content.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
     </div>
   </header>
 
@@ -73,6 +86,9 @@
     </div>
   </div>
 </div>
+<footer>  <br>
+    <h5 style="color:white"><pre>© Developed by <a style="color:#FFE4E1" href="https://www.facebook.com/mehedialhasansawon217">Mehedi Al Hasan Sawon</pre> </a></h5>
+</footer>
   <script src="scripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
