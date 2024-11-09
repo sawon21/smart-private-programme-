@@ -2,99 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Private Programme Online Class</title>
-    <meta property="og:image" content="logo.png">
-    <link rel="icon" href="icon.png"/>    
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Advanced Secure Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+ <!-- External CSS file link -->
+ <style>
+ @import url('https://fonts.maateen.me/apona-lohit/font.css');  
+
+   body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'AponaLohit', sans-serif;
+    font-weight: bold;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-btn {
+    background-color: #fbc02d;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #f9a825;
+    transform: translateY(-2px);
+}
+
+.input-group-text {
+    cursor: pointer;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #fbc02d;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+ </style>
 </head>
 <body>
 
-    <!-- Install Notification Banner -->
-    <div id="installNotification" class="install-notification" style="display: none;">
-        <p>Install this app for a better experience! 😊</p>
-        <button id="installBtn" class="btn btn-primary">Install</button>
-        <button onclick="document.getElementById('installNotification').style.display = 'none';" class="btn btn-secondary">Dismiss</button>
+    <script>
+        if (localStorage.getItem('loggedIn') === 'true') {
+            window.location.href = 'main.html'; // Redirect to main page if already logged in
+        }
+    </script>
+
+    <div class="login-container">
+        <div class="login-header">
+            <img src="https://i.ibb.co.com/wC9rGkM/1731152879802.jpg" alt="Logo" class="mb-3 rounded-circle" width="80px">
+            <h2>Welcome to Smart Private Programme </h2>
+            <p class="text-muted">যে কখনো ভুল করেনি, সে কখনো শেখার চেষ্টা করেনি |</p>
+        </div>
+        <form id="loginForm">
+            <div class="mb-3">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+                <label for="userId" class="form-label">User ID</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="userId" placeholder="Enter your user ID" required>
+                    <span class="input-group-text" id="togglePassword">
+                        <i class="bi bi-eye"></i>
+                    </span>
+                </div>
+            </div>
+            <button type="submit" class="btn login-btn w-100">LOGIN</button>
+        </form>
+        <a href="#" class="forgot-password">Forgot password?</a>
     </div>
 
-  <!-- Fixed Header -->
-  <header class="fixed-top">
-    <div class="container d-flex justify-content-between align-items-center py-3">
-      <img src="logo.png" alt="Logo" class="logo" height="40">
-      <h4 class="text-white">Smart Private programme </h4>
-  
-  <button type="button" class="icon-button" id="notificationBtn">
-    <span class="material-icons">notifications</span>
-    <span class="icon-button__badge" id="badge"></span>
-  </button>
-
-  <!-- Popup content -->
-  <div class="popup" id="popup">
-    <div class="popup-content">
-      <h2 id="popupTitle">Notifications</h2>
-      <div id="popupMessages"></div>
-      <button onclick="closePopup()">Close</button>
-    </div>
-  </div>
-
-    </div>
-  </header>
-
-  <div class="container mt-5 pt-5">
-    <!-- Search Bar -->
-    <div class="search-bar">
-      <input type="text" id="searchInput" class="form-control" placeholder="Search videos..." onkeyup="searchVideos()" />
-      <div id="suggestionsList" class="suggestions-list"></div>
+    <div class="toast-container">
+        <div id="loginToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                <strong class="me-auto">Login Status</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <span id="toastMessage"></span>
+            </div>
+        </div>
     </div>
 
-    <!-- Filter Buttons -->
-    <div class="filter-buttons text-center mb-4">
-      <button class="btn btn-success" onclick="showAllVideos()">Show All</button>
-      <button class="btn-btn-info" onclick="filterVideos('math')">Math</button>
-      <button class="btn-btn-info" onclick="filterVideos('physics')">Physics</button>
-            <button class="btn-btn-info" onclick="filterVideos('physics')">Physics</button>
-      <button class="btn-btn-info" onclick="filterVideos('chemistry')">Chemistry</button>
-            <button class="btn-btn-live" onclick="filterVideos('live')"><i class="fas fa-broadcast-tower"></i> Live</button>
-
-    </div>
-
-    <!-- Video Player Card with Controls -->
-    <div id="videoWrapper" class="video-player-card">
-      <iframe id="facebookVideoPlayer" class="video-player" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-
-
-    <!-- Playlist Section -->
-    <div class="playlist-container">
-      
-      <div class="d-flex flex-column playlist-scrollable" id="playlist"></div>
-    </div>
-  </div>
-<!-- Full-screen Welcome Popup -->
-<div class="modal fade" id="welcomePopup" tabindex="-1" aria-labelledby="welcomePopupLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="welcomePopupLabel">Welcome to Smart Private Programme!</h5>
-      </div>
-      <div class="modal-body">
-        <p class="lead text-center">Experience an interactive and seamless learning platform.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<footer>  <br>
-    <h5 style="color:white"><pre>© Developed by <a style="color:#FFE4E1" href="https://www.facebook.com/mehedialhasansawon217">Mehedi Al Hasan Sawon</pre> </a></h5>
-</footer>
-  <script src="scripts.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Scripts -->
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lg.js"></script> <!-- External JS file link -->
 </body>
 </html>

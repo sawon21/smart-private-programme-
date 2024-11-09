@@ -1,10 +1,12 @@
 // Cache names
-const CACHE_NAME = 'my-cache-ejdn626';
+const CACHE_NAME = 'my-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
+  '/main.html',
   '/styles.css',
   '/app.js',
+  '/lg.js'
   '/scripts.js'
 ];
 
