@@ -91,10 +91,11 @@ window.onload = function() {
 
 // Notification Data
 const unreadMessages = [
-  { title: "New Message", content: "Test" },
+   { title: "New Message", content: "Hi" },
+     { title: "New Message", content: "Test" },
     { title: "Developer", content: "Mehedi" }
 ];
-const cacheName = "notification-v1";
+const cacheName = "notification-vbbb1";
 
 // Initialize notification badge on load
 document.addEventListener("DOMContentLoaded", function() {
