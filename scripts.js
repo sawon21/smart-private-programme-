@@ -91,11 +91,12 @@ window.onload = function() {
 
 // Notification Data
 const unreadMessages = [
-  { title: "New Message", content: "You have received a new message." },
+  { title: "New Notification", content: "You have received a new message." },
+{ title: "New Message", content: "You have received a new message." },
   { title: "Update Available", content: "A new update is available for your app." },
   { title: "Friend Request", content: "Someone sent you a friend request." }
 ];
-const cacheName = "notification-vffm71";
+const cacheName = "notification-v90km71";
 
 // Initialize notification badge on load
 document.addEventListener("DOMContentLoaded", function() {
