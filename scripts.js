@@ -123,22 +123,22 @@ window.onload = function() {
 const unreadMessages = [
   { 
     title: "New Message", 
-    content: "You have received a new message.",
-    imageUrl: "https://i.ibb.co.com/gW7qWKt/virtual-Sunday-service-1731017016115.jpg" // Example image URL, optional
+    content: "App Testing...",
+    imageUrl: "https://images.app.goo.gl/LRTd17tp5aX9HH589" // Example image URL, optional
   },
   { 
     title: "Update Available", 
     content: "A new update is available for your app.", 
     link: "https://spp-test-app.netlify.app/" , // Link for Update available
-    imageUrl: "https://i.ibb.co.com/0yp4H4w/Online-Cooking-Classes-1731142660436.jpg"
+    imageUrl: "https://i.ibb.co.com/FzPHjBt/app-testing-icon-simple-element-from-vector-34151964.jpg"
   },
   { 
-    title: "Friend Request", 
-    content: "Someone sent you a friend request.", 
+    title: " Request", 
+    content: "Someone sent you request.", 
     link: "/friends" // Link for Friend Request
   }
 ];
-const cacheName = "notification-vfrhr8c71";
+const cacheName = "notification-nfj74741";
 
 // Initialize notification badge on load
 document.addEventListener("DOMContentLoaded", function() {
