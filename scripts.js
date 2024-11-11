@@ -91,16 +91,17 @@ window.onload = function() {
 
 // Notification Data
 const unreadMessages = [
-    { title: "New Message", content: "Test" },
-    { title: "Developer", content: "Mehedi" }
+  { title: "New Message", content: "You have received a new message." },
+  { title: "Update Available", content: "A new update is available for your app." },
+  { title: "Friend Request", content: "Someone sent you a friend request." }
 ];
-const cacheName = "notification-v0b1";
+const cacheName = "notification-vffm71";
 
 // Initialize notification badge on load
 document.addEventListener("DOMContentLoaded", function() {
   const lastSeenCacheName = localStorage.getItem("notificationCacheName");
 
-  if (unreadMessages.length > 3 && lastSeenCacheName !== cacheName) {
+  if (unreadMessages.length > 0 && lastSeenCacheName !== cacheName) {
     document.getElementById("badge").textContent = unreadMessages.length;
     document.getElementById("badge").style.display = "flex";
   } else {
