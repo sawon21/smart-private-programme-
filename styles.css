@@ -40,7 +40,7 @@ body {
   background-image: url('bg.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 95%;
+  background-size: 100% 90%;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -181,7 +181,7 @@ body {
 
   .playlist-item img {
     width: 100px;
-    height: 56px;
+    height: 75px;
   }
 
   .search-bar input {
@@ -384,6 +384,7 @@ body {
       margin: 0;
       font-size: 17px;
       color: blue;
+      background-color: #999999;
       font-weight: bold;
     }
 
@@ -416,6 +417,7 @@ body {
 
 .notification-link:hover {
   background-color: #0056b3;
+  color: white;
 }
 
 /* Custom scrollbar styling */

@@ -39,7 +39,7 @@ function populatePlaylist(videos = playlistData) {
     div.innerHTML = `
       <img src="https://img.youtube.com/vi/${extractVideoId(video.videoUrl)}/0.jpg" alt="Video Thumbnail">
       <div>
-        <h5>${video.title}</h5>
+        <h6>${video.title}</h6>
         <p>${video.description}</p>
 
       </div>
