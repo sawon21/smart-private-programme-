@@ -1,10 +1,10 @@
 // Playlist Data
 const playlistData = [
-  { title: 'YouTube Video 1', videoUrl: 'https://youtu.be/q0JaZLtVWt8?si=DtMNfFMdzOKTl7FH', description: 'This is a music video featuring Rick Astley.', tags: 'music, pop', keys: ["math"] },
-  { title: 'YouTube Video 2', videoUrl: 'https://youtu.be/qyNtpybNQqc?si=aiyJLRg2sOr7DOc5', description: 'A tutorial on JavaScript basics for beginners.', tags: 'tutorial, programming', keys: ["physics"] },
-  { title: 'YouTube Video 2', videoUrl: 'https://youtu.be/q0JaZLtVWt8?si=x3aXcGdSXEvky4RD', description: 'A tutorial on JavaScript basics for beginners.', tags: 'tutorial, programming', keys: ["physics"] },
-  { title: 'YouTube Video 3', videoUrl: 'https://www.youtube.com/watch?v=3JZ_D3ELwOQ', description: 'A travel vlog showcasing beautiful destinations.', tags: 'travel, vlog' },
-  { title: 'Somoy tv', videoUrl: 'https://www.youtube.com/live/-EkNyHXVqBw?si=0Sez5abyMb3BrcQo', description: 'A cooking recipe tutorial for a quick meal.', tags: 'cooking, recipe', keys: ["live"] }
+  { title: 'জটিল সংখ্যা - Complex Number One Shot Revision Class', videoUrl: 'https://youtu.be/zO6c19pXd4U?si=NE_JMkJyLlqRl4X_', description: 'This is a music video featuring Rick Astley.', tags: 'জটিল, Math 2nd paper', keys: ["math"] },
+  { title: 'সরলরেখা লেকচার ১ || HSC 24 |', videoUrl: 'https://youtu.be/bFi4-29-8W8?si=zvq0YKMgVryKzO-h', description: 'A tutorial on JavaScript basics for beginners.', tags: 'Abhi vai, HSC Math', keys: ["math"] },
+  { title: 'CHEMISTRY || পরিমানগত রসায়ন', videoUrl: 'https://youtu.be/pwEd10NuNgo?si=jIoNG-rDXS8I1SAW', description: 'A tutorial on JavaScript basics for beginners.', tags: 'CHEMISTRY, HSC', keys: ["chemistry"] },
+  { title: 'ভেক্টর Introduction and topics of the Chapter | vector hsc 1st', videoUrl: 'https://youtu.be/WVKJCfRw6wA?si=QG_WhbZcQFg5zryD', description: 'A travel vlog showcasing beautiful destinations.', tags: 'ভেক্টর, apurbo ', keys: ["physics"]},
+  { title: 'Somoy tv', videoUrl: 'https://www.youtube.com/live/-EkNyHXVqBw?si=0Sez5abyMb3BrcQo', description: 'A cooking recipe tutorial for a quick meal.', tags: 'news, tv', keys: ["live"] }
 ];
 
 // Function to extract video ID from YouTube URL
